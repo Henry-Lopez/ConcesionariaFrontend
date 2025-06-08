@@ -1,0 +1,128 @@
+.reporte-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem;
+    background-color: #f5f7fa;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.reporte-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+}
+
+.reporte-card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.reporte-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0077cc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.reporte-list {
+    padding-left: 1rem;
+    margin: 0;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.reporte-item {
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.export-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.export-btn:hover {
+    background-color: #0056b3;
+}
+
+@media print {
+    .export-btn, .tabs, .reporte-acciones {
+        display: none !important;
+    }
+}
+
+/* 🌙 MODO OSCURO */
+.modo-oscuro {
+    background-color: #1e1e1e;
+    color: #eee;
+}
+
+.modo-oscuro .reporte-card {
+    background-color: #2a2a2a;
+    color: #eee;
+}
+
+.modo-oscuro .reporte-title {
+    color: #66ccff;
+}
+
+.modo-oscuro .reporte-item {
+    color: #ddd;
+}
+
+.modo-oscuro .export-btn {
+    background-color: #444;
+    color: #eee;
+}
+
+.modo-oscuro .export-btn:hover {
+    background-color: #666;
+}
+
+/* 🧭 TABS */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.activo {
+    background-color: #007bff;
+    color: white;
+}
+
+.modo-oscuro .tab-btn {
+    background-color: #444;
+    color: #ccc;
+}
+
+.modo-oscuro .tab-btn.activo {
+    background-color: #66ccff;
+    color: #000;
+}
